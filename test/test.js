@@ -48,6 +48,28 @@ describe('Test text mail results', function() {
       done();
     });
   });
+
+  it('mail from gmail with outlook forward before', function(done) {
+    var document = {
+      metadata: {
+        text: "Salut !\nDe : buathi_q@epitech.eu\n....\n---------- Forwarded message ----------\nFrom : buathi_q@epitech.eu\n...."
+      },
+      data: {},
+    };
+
+    var changes = anyfetchHydrater.defaultChanges();
+
+    embedMailHydrater(null, document, changes, function(err, changes) {
+      if (err) {
+        done(err);
+      }
+
+      changes.metadata.should.have.property('text');
+      changes.metadata.should.have.property('text', 'Salut !');
+
+      done();
+    });
+  });
 });
 
 describe('Test html mail results', function() {
