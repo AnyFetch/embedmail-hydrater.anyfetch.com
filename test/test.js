@@ -17,15 +17,13 @@ describe('Test text mail results', function() {
 
     embedMailHydrater(null, document, changes, function(err, changes) {
       if (err) {
-        done(new Error("It should not have an error"));
+        done(err);
       }
 
       changes.should.have.property('metadata');
       changes.should.have.property('data');
       changes.metadata.should.have.property('text');
-      changes.data.should.have.property('html');
-
-      changes.metadata.text.should.containDeep('Salut !');
+      changes.metadata.should.have.property('text', 'Salut !');
 
       done();
     });
@@ -43,15 +41,13 @@ describe('Test text mail results', function() {
 
     embedMailHydrater(null, document, changes, function(err, changes) {
       if (err) {
-        done(new Error("It should not have an error"));
+        done(err);
       }
 
       changes.should.have.property('metadata');
       changes.should.have.property('data');
       changes.metadata.should.have.property('text');
-      changes.data.should.have.property('html');
-
-      changes.metadata.text.should.containDeep('Salut !');
+      changes.metadata.should.have.property('text', 'Salut !');
 
       done();
     });
@@ -73,14 +69,12 @@ describe('Test html mail results', function() {
 
     embedMailHydrater(null, document, changes, function(err, changes) {
       if (err) {
-        done(new Error("It should not have an error"));
+        done(err);
       }
 
       changes.should.have.property('metadata');
       changes.should.have.property('data');
-      changes.metadata.should.have.property('text');
-
-      changes.metadata.text.should.containDeep('Salut !');
+      changes.metadata.should.have.property('text', 'Salut !');
 
       done();
     });
@@ -100,14 +94,12 @@ describe('Test html mail results', function() {
 
     embedMailHydrater(null, document, changes, function(err, changes) {
       if (err) {
-        done(new Error("It should not have an error"));
+        done(err);
       }
 
       changes.should.have.property('metadata');
       changes.should.have.property('data');
-      changes.metadata.should.have.property('text');
-
-      changes.metadata.text.should.containDeep('Salut !');
+      changes.metadata.should.have.property('text', 'Salut !');
 
       done();
     });
