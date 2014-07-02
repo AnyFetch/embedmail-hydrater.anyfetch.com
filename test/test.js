@@ -20,8 +20,6 @@ describe('Test text mail results', function() {
         done(err);
       }
 
-      changes.should.have.property('metadata');
-      changes.should.have.property('data');
       changes.metadata.should.have.property('text');
       changes.metadata.should.have.property('text', 'Salut !');
 
@@ -44,8 +42,6 @@ describe('Test text mail results', function() {
         done(err);
       }
 
-      changes.should.have.property('metadata');
-      changes.should.have.property('data');
       changes.metadata.should.have.property('text');
       changes.metadata.should.have.property('text', 'Salut !');
 
@@ -72,8 +68,6 @@ describe('Test html mail results', function() {
         done(err);
       }
 
-      changes.should.have.property('metadata');
-      changes.should.have.property('data');
       changes.metadata.should.have.property('text', 'Salut !');
 
       done();
@@ -97,8 +91,6 @@ describe('Test html mail results', function() {
         done(err);
       }
 
-      changes.should.have.property('metadata');
-      changes.should.have.property('data');
       changes.metadata.should.have.property('text', 'Salut !');
 
       done();
