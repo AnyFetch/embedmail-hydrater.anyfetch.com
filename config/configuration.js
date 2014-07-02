@@ -19,5 +19,7 @@ module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
 
-  concurrency: process.env.EMBED_MAIL_CONCURRENCY || default_concurrency
+  concurrency: process.env.EMBED_MAIL_CONCURRENCY || default_concurrency,
+
+  separators: require('./separators.js')
 };
