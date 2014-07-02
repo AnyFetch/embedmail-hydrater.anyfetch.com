@@ -19,5 +19,18 @@ module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
 
-  concurrency: process.env.EMBED_MAIL_CONCURRENCY || default_concurrency
+  concurrency: process.env.EMBED_MAIL_CONCURRENCY || default_concurrency,
+
+  separators_html: [
+    "<div class=\"yahoo_quoted\">",
+    "<div class=\"gmail_extra\">",
+  ],
+
+  separators_text: [
+    /\n?De\s*:\s*/i, // Outlook Web App
+    /-{2,}\s*[a-z0-9 ]*(forward)|(original)[a-z0-9 ]*\s*-{2,}/i, // Gmail
+    /\n?From\s*:\s/i,
+    /\n[_-]{4,}/,
+    /\non(.+)wrote:\n/i,
+  ]
 };
