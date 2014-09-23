@@ -9,7 +9,7 @@
     "start": "node ./bin/server",
     "test": "NODE_ENV=test mocha -R spec -t 10000 test/",
     "lint": "jshint lib/ test/ config/ bin/",
-    "preinstall": "pip2 install talon"
+    "preinstall": "pip2 install talon -t python"
   },
   "main": "./lib/",
   "repository": {
