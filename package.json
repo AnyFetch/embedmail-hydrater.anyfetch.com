@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "async": "0.9.x",
+    "html-entities": "^1.1.1",
     "anyfetch-hydrater": "1.0.7"
   },
   "devDependencies": {
