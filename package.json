@@ -23,12 +23,12 @@
   "dependencies": {
     "async": "0.9.x",
     "html-entities": "^1.1.1",
-    "anyfetch-hydrater": "1.0.14"
+    "anyfetch-hydrater": "^2.0.0"
   },
   "devDependencies": {
-    "mocha": "1.20.x",
-    "should": "4.x.x",
-    "supertest": "0.13.x",
+    "mocha": "^2.0.1",
+    "should": "^4.3.0",
+    "supertest": "^0.15.0",
     "jshint": "2.5.x"
   },
   "licence": "MIT",
