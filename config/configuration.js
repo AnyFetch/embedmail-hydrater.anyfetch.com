@@ -2,24 +2,26 @@
  * @file Defines the hydrater settings.
  */
 
-// node_env can either be "development" or "production"
-var node_env = process.env.NODE_ENV || "development";
-var default_port = 8000;
+// nodeEnv can either be "development" or "production"
+var nodeEnv = process.env.nodeEnv || "development";
+var defaultPort = 8000;
 
 
 // Number of instance to run simultaneously per cluster
-var default_concurrency = 1;
+var defaultConcurrency = 1;
 
-if(node_env === "production") {
-  default_port = 80;
+if(nodeEnv === "production") {
+  defaultPort = 80;
 }
 
 // Exports configuration
 module.exports = {
-  env: node_env,
-  port: process.env.PORT || default_port,
+  env: nodeEnv,
+  port: process.env.PORT || defaultPort,
 
-  concurrency: process.env.EMBED_MAIL_CONCURRENCY || default_concurrency,
+  concurrency: process.env.EMBED_MAIL_CONCURRENCY || defaultConcurrency,
 
-  separators: require('./separators.js')
+  separators: require('./separators.js'),
+  appName: process.env.APP_NAME || "embedmail-hydrater",
+  redisURL: process.env.REDIS_URL
 };
