@@ -23,5 +23,5 @@ module.exports = {
 
   separators: require('./separators.js'),
   appName: process.env.APP_NAME || "embedmail-hydrater",
-  redisURL: process.env.REDIS_URL
+  redisUrl: process.env.REDIS_URL
 };
