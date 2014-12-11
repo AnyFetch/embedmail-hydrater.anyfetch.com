@@ -19,7 +19,8 @@ module.exports = {
   env: nodeEnv,
   port: process.env.PORT || defaultPort,
 
-  concurrency: process.env.EMBEDMAIL_CONCURRENCY || defaultConcurrency,
+  concurrency: process.env.CONCURRENCY || defaultConcurrency,
+  tasksPerProcess: process.env.TASKS_PER_PROCESS,
 
   separators: require('./separators.js'),
   appName: process.env.APP_NAME || "embedmail-hydrater",
