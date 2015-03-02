@@ -23,7 +23,7 @@
   "dependencies": {
     "async": "0.9.x",
     "html-entities": "^1.1.2",
-    "anyfetch-hydrater": "^2.0.8"
+    "anyfetch-hydrater": "^2.0.9"
   },
   "devDependencies": {
     "mocha": "^2.1.0",
