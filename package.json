@@ -21,9 +21,10 @@
     "mail"
   ],
   "dependencies": {
+    "anyfetch-hydrater": "^2.2.0",
     "async": "0.9.x",
-    "html-entities": "^1.1.2",
-    "anyfetch-hydrater": "^2.2.0"
+    "heroku-self-ping": "^1.1.1",
+    "html-entities": "^1.1.2"
   },
   "devDependencies": {
     "mocha": "^2.1.0",
